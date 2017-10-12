@@ -1,4 +1,4 @@
-Complilation
+Compilation
 ---
 
 ``` bash
