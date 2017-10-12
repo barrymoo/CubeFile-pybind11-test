@@ -14,3 +14,4 @@ include_directories(${PYTHON_INCLUDE_DIRS} ${PYBIND_INCLUDE})
 # SOURCES and SHARED Library
 set(SOURCES CubeFile-pybind11.cpp CubeFile.cpp)
 add_library(CubeFile SHARED ${SOURCES})
+set_target_properties(CubeFile PROPERTIES PREFIX "")
