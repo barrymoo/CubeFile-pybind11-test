@@ -5,13 +5,11 @@
 
 namespace py = pybind11;
 
-PYBIND11_PLUGIN(CubeFile) {
-  py::module m("CubeFile", "pybind11 CubeFile plugin");
-
+PYBIND11_MODULE(CubeFile, m) {
   py::class_<CubeFile>(m, "CubeFile")
     .def(py::init<>())
     .def(py::init<const std::string&>())
-    .def(py::init<const CubeFile*>())
+    .def(py::init<const CubeFile&>())
     .def("read", &CubeFile::read)
     .def("write", &CubeFile::write)
     .def("copy", &CubeFile::copy)
@@ -63,6 +61,4 @@ PYBIND11_PLUGIN(CubeFile) {
   m.def("g_cube_square_root", g_cube_square_root);
   m.def("g_cube_partition_plus", g_cube_partition_plus);
   m.def("g_cube_partition_minus", g_cube_partition_minus);
-//
-  return m.ptr();  
 }

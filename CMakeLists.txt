@@ -9,7 +9,7 @@ find_package(PythonLibs REQUIRED)
 set(CMAKE_CXX_STANDARD 11)
 
 # Include Directory for pybind11
-include_directories(${PYTHON_INCLUDE_DIRS} /Users/bmooreii/src/pybind11/include)
+include_directories(${PYTHON_INCLUDE_DIRS} ${PYBIND_INCLUDE})
 
 # SOURCES and SHARED Library
 set(SOURCES CubeFile-pybind11.cpp CubeFile.cpp)
